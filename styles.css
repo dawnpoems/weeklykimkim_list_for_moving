@@ -35,6 +35,10 @@ span {
   width: 40%;
 }
 
+.article-list__box {
+  height: 85%;
+}
+
 .classify__home {
   background-color: #333;
   padding: 10px;
