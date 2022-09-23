@@ -1,6 +1,8 @@
 const artiForm = document.querySelector(".article-list__form");
 const artiInput = document.querySelector(".article-list__form input");
 const artiList = document.querySelector(".article-list__box");
+const artihome = document.querySelector(".classify__home__box");
+const artibuy = document.querySelector(".classify__buy__box");
 
 const ARTIS_KEY = "artis";
 
@@ -51,7 +53,13 @@ function paintArti(newArtiObj) {
   p.appendChild(span);
   p.appendChild(checkbtn);
   p.appendChild(Xbtn);
-  artiList.prepend(p);
+  if (newArtiObj.location === "classify__home__box container") {
+    artihome.prepend(p);
+  } else if (newArtiObj.location === "classify__buy__box container") {
+    artibuy.prepend(p);
+  } else {
+    artiList.prepend(p);
+  }
   dragAndDrop();
 }
 
@@ -63,7 +71,7 @@ function handleArtiSubmit(event) {
     text: newArti,
     id: Date.now(),
     checked: false,
-    location: "list",
+    location: "article-list__box container",
   };
   Artis.push(newArtiObj);
   paintArti(newArtiObj);

@@ -2,7 +2,7 @@ function saveLocation(draggables) {
   const dragpla = draggables.parentNode.className;
   oriArtis = Artis.find((arti) => arti.id === parseInt(draggables.id));
   oriArtis.location = dragpla;
-  console.log(oriArtis.location);
+  saveArtis();
 }
 
 function dragAndDrop() {
