@@ -19,7 +19,11 @@ function deleteArti(event) {
 
 function checkArti(event) {
   const p = event.target.parentElement;
-  p.classList.add("checked");
+  if (p.classList.contains("checked")) {
+    p.classList.remove("checked");
+  } else {
+    p.classList.add("checked");
+  }
 }
 
 function paintArti(newArtiObj) {
