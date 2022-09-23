@@ -17,25 +17,34 @@ function deleteArti(event) {
   saveArtis();
 }
 
-function checkArti(event) {
+function checkArti(event, newArtiObj) {
   const p = event.target.parentElement;
-  if (p.classList.contains("checked")) {
+  if (newArtiObj.checked === true) {
     p.classList.remove("checked");
+    newArtiObj.checked = false;
   } else {
     p.classList.add("checked");
+    newArtiObj.checked = true;
   }
+  oriArtis = Artis.find((arti) => arti.id !== parseInt(p.id));
+  saveArtis();
 }
 
 function paintArti(newArtiObj) {
   const p = document.createElement("p");
   p.id = newArtiObj.id;
   p.className = "draggable";
+  if (newArtiObj.checked === true) {
+    p.classList.add("checked");
+  }
   p.draggable = "true";
   const span = document.createElement("span");
   span.innerText = newArtiObj.text;
   const checkbtn = document.createElement("button");
   checkbtn.innerText = "✔️";
-  checkbtn.addEventListener("click", checkArti);
+  checkbtn.addEventListener("click", function (event) {
+    checkArti(event, newArtiObj);
+  });
   const Xbtn = document.createElement("button");
   Xbtn.addEventListener("click", deleteArti);
   Xbtn.innerText = "❌";
@@ -53,6 +62,7 @@ function handleArtiSubmit(event) {
   const newArtiObj = {
     text: newArti,
     id: Date.now(),
+    checked: false,
   };
   Artis.push(newArtiObj);
   paintArti(newArtiObj);
