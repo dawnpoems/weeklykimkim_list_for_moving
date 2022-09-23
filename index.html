@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List for Moving</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="article-list container">
+      <span>물품목록</span>
+      <input type="text" placeholder="물품을 입력해주세요" />
+      <p class="draggable" draggable="true">1</p>
+      <p class="draggable" draggable="true">2</p>
+    </div>
+    <div class="classify__home container">
+      <span>집에서 가져갈 것</span>
+      <p class="draggable" draggable="true">3</p>
+    </div>
+    <div class="classify__buy container">
+      <span>가서 살 것</span>
+      <p class="draggable" draggable="true">4</p>
+    </div>
+
+    <script src="articles.js"></script>
+    <script src="classify.js"></script>
+  </body>
+</html>

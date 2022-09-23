@@ -1,0 +1,39 @@
+body {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height: 97vh;
+}
+
+.article-list {
+  background-color: #333;
+  padding: 15px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+span {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.classify__home {
+  background-color: #333;
+  padding: 10px;
+}
+.classify__buy {
+  background-color: #333;
+  padding: 10px;
+}
+
+.draggable {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid black;
+  cursor: move;
+}
+.draggable.dragging {
+  opacity: 0.5;
+}
