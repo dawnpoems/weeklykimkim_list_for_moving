@@ -8,19 +8,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="article-list container">
+    <div class="article-list main">
       <span>물품목록</span>
-      <input type="text" placeholder="물품을 입력해주세요" />
-      <p class="draggable" draggable="true">1</p>
-      <p class="draggable" draggable="true">2</p>
+      <form>
+        <input type="text" placeholder="물품을 입력해주세요" />
+      </form>
+      <div class="article-list__box container">
+        <p class="draggable" draggable="true">1</p>
+        <p class="draggable" draggable="true">2</p>
+      </div>
     </div>
-    <div class="classify__home container">
+    <div class="classify__home main">
       <span>집에서 가져갈 것</span>
-      <p class="draggable" draggable="true">3</p>
+      <div class="classify__home__box container">
+        <p class="draggable" draggable="true">3</p>
+      </div>
     </div>
-    <div class="classify__buy container">
+    <div class="classify__buy main">
       <span>가서 살 것</span>
-      <p class="draggable" draggable="true">4</p>
+      <div class="classify__buy__box container">
+        <p class="draggable" draggable="true">4</p>
+      </div>
     </div>
 
     <script src="articles.js"></script>
