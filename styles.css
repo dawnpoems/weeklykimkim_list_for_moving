@@ -26,6 +26,15 @@ span {
   border-radius: 5px;
 }
 
+.article-list__form {
+  margin-top: 15px;
+}
+
+.article-list__form input {
+  padding: 5px;
+  width: 40%;
+}
+
 .classify__home {
   background-color: #333;
   padding: 10px;
