@@ -63,6 +63,7 @@ function handleArtiSubmit(event) {
     text: newArti,
     id: Date.now(),
     checked: false,
+    location: "list",
   };
   Artis.push(newArtiObj);
   paintArti(newArtiObj);

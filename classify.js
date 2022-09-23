@@ -1,3 +1,10 @@
+function saveLocation(draggables) {
+  const dragpla = draggables.parentNode.className;
+  oriArtis = Artis.find((arti) => arti.id === parseInt(draggables.id));
+  oriArtis.location = dragpla;
+  console.log(oriArtis.location);
+}
+
 function dragAndDrop() {
   const draggables = document.querySelectorAll(".draggable");
   const containers = document.querySelectorAll(".container");
@@ -8,6 +15,7 @@ function dragAndDrop() {
     });
     draggable.addEventListener("dragend", () => {
       draggable.classList.remove("dragging");
+      saveLocation(draggable);
     });
   });
 
